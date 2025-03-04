@@ -1,46 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Bangers', cursive;
+    text-align: left;
     background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
 }
 
-header img {
-    width: 150px;
-    margin: 20px auto;
-    display: block;
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 3vh 0;
+    text-align: left;
 }
 
-.hero img {
+.features h1 {
+    text-align: left;
     width: 100%;
-    max-width: 400px;
+}
+h1{
+    color: #FFF200;
+}
+/* Override center-aligned elements */
+h1, h2, p, .feature{
+    text-align: left;
 }
 
+/* If specific sections are still centered, override them */
+.comic, .description, .features, .bottom {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+}
+
+.firstImg {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+}
+
+/* Comic Section */
+.comic {
+    position: relative;
+    max-width: 100%;
+    margin: 5vh auto;
+    padding: 2vh;
+}
+
+.comic h1 {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+.comicImg {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+}
+
+/* Description Section */
+.description {
+    max-width: 80%;
+    margin: auto;
+    padding: 3vh 2vw;
+    line-height: 1.6;
+}
+
+/* Features Section */
 .features {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3vh;
+    padding: 3vh;
 }
 
 .feature {
-    width: 80%;
-    margin: 20px 0;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3vh;
+    border-radius: 1rem;
 }
 
+.feature h2 {
+    font-size: 1.5rem;
+}
+
+.feature img {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Call to Action */
 .cta button {
     background-color: yellow;
     color: black;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     border: none;
-    font-size: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
 }
+
+.cta button:hover {
+    background-color: #ff0;
+}
+
+/* Bottom Section */
+.bottom {
+    margin: 5vh auto;
+    text-align: center;
+}
+
+.bottom img {
+    width: 22vw;
+    max-width: 200px;
+    height: auto;
+    margin: 1vw;
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
     .features {
-        flex-direction: row;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vw;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .comic h1,
+    .description h1,
+    .features h1,
+    .bottom h1 {
+        font-size: 1.5rem;
+    }
+
+    .feature {
+        width: 95%;
+    }
+
+    .cta button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 }

@@ -1,95 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 body {
     font-family: 'Bangers', cursive;
-    text-align: left;
     background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
+    text-align: left;
+    box-sizing: border-box;
 }
-
 
 header {
     display: flex;
     justify-content: center;
     padding: 3vh 0;
-    text-align: left;
 }
 
-.features h1 {
-    text-align: left;
-    width: 100%;
-}
-h1{
+h1 {
     color: #FFF200;
-}
-/* Override center-aligned elements */
-h1, h2, p, .feature{
+    font-size: 1.875rem !important;
     text-align: left;
 }
 
-/* If specific sections are still centered, override them */
-.comic, .description, .features, .bottom {
+h2 {
+    color: #5FD2FF;
+    font-size: 1.437rem !important;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns content to the left */
 }
 
-.firstImg {
-    width: 100%;
-    max-width: 430px;
-    height: auto;
+p {
+    font-family: 'Chewy', cursive;
+    font-size: 1.437rem !important;
+    text-align: left;
 }
 
-/* Comic Section */
 .comic {
-    position: relative;
-    max-width: 100%;
-    margin: 5vh auto;
-    padding: 2vh;
+    margin: 2vh auto;
+    padding: 1rem;
 }
 
-.comic h1 {
-    font-size: 2rem;
-    margin-bottom: 1vh;
-}
-
-.comicImg {
-    width: 100%;
-    max-width: 90vw;
-    height: auto;
-}
-
-/* Description Section */
 .description {
-    max-width: 80%;
-    margin: auto;
-    padding: 3vh 2vw;
-    line-height: 1.6;
+    margin: 2vh auto;
+    padding: 1rem;
 }
 
-/* Features Section */
 .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3vh;
-    padding: 3vh;
+    margin: 2vh auto;
+    padding: 1rem;
 }
 
-.feature {
-    width: 90%;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 3vh;
-    border-radius: 1rem;
-}
-
-.feature h2 {
-    font-size: 1.5rem;
+.bottom {
+    margin: 2vh auto;
+    padding: 1rem;
 }
 
 .feature img {
@@ -98,28 +61,18 @@ h1, h2, p, .feature{
     height: auto;
 }
 
-/* Call to Action */
-.cta button {
-    background-color: yellow;
-    color: black;
-    padding: 1rem 2rem;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
+.comicImg {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
 }
 
-.cta button:hover {
-    background-color: #ff0;
+.firstImg {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Bottom Section */
-.bottom {
-    margin: 5vh auto;
-    text-align: center;
-}
 
 .bottom img {
     width: 22vw;
@@ -128,30 +81,8 @@ h1, h2, p, .feature{
     margin: 1vw;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .features {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4vw;
-        justify-items: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .comic h1,
-    .description h1,
-    .features h1,
-    .bottom h1 {
-        font-size: 1.5rem;
-    }
-
-    .feature {
-        width: 95%;
-    }
-
-    .cta button {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-    }
+.contactImg {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
 }

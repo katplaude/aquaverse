@@ -65,6 +65,12 @@
         height: auto;
     }
 
+    .feature1 img {
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+    }
+
     .comicImg {
         width: 100%;
         max-width: 90vw;
@@ -182,6 +188,12 @@
         flex-direction: row-reverse;
         align-items: center;
         gap: 2vw;
+    }
+
+    .feature1 img {
+        width: 100%;
+        max-width: 40vw;
+        height: auto;
     }
 
     .feature-text1 {
